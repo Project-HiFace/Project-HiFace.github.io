@@ -20,7 +20,8 @@
                 <a class="navbar-item" href="https://www.microsoft.com/en-us/">
                     <img src="img/Microsoft-logo.svg" alt="Microsoft" style="height: 1.4rem;">
                 </a>
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -31,7 +32,8 @@
     <section class="section">
         <div class="container is-max-desktop">
             <h1 class="title is-2 has-text-centered">
-                HiFace: High-Fidelity 3D Face Reconstruction <br class="is-hidden-tablet">by Learning Static and Dynamic Details
+                HiFace: High-Fidelity 3D Face Reconstruction <br class="is-hidden-tablet">by Learning Static and Dynamic
+                Details
             </h1>
             <p class="subtitle is-5 has-text-centered has-text-grey">
                 arXiv Preprint<br class="is-hidden-tablet">
@@ -51,8 +53,10 @@
                     <a href="https://www.microsoft.com/en-us/research/people/xuta">Xu&nbsp;Tan<sup>2</sup></a>
                 </span>
                 <span>
-                    <a href="https://www.microsoft.com/en-us/research/people/tabaltru">Tadas &nbsp;Baltru&scaron;aitis<sup>3</sup></a>
+                    <a href="https://www.microsoft.com/en-us/research/people/tabaltru">Tadas
+                        &nbsp;Baltru&scaron;aitis<sup>3</sup></a>
                 </span>
+                <br />
                 <span>
                     <a href="mailto:musclewu@microsoft.com">HsiangTao&nbsp;Wu<sup>4</sup></a>
                 </span>
@@ -85,13 +89,13 @@
             </p>
         </div>
         <div class="container is-max-desktop has-text-centered mt-5">
-            <a href="https://arxiv.org" class="button is-rounded is-link is-light mr-2">
+            <a href="https://arxiv.org/abs/2303.11225" class="button is-rounded is-link is-light mr-2">
                 <span class="icon"><i class="ai ai-arxiv"></i></span>
-                <span>arXiv (TBD)</span>
+                <span>arXiv</span>
             </a>
-            <a href="https://arxiv.org" class="button is-rounded is-link is-light mr-2">
+            <a href="https://arxiv.org/abs/2303.11225" class="button is-rounded is-link is-light mr-2">
                 <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                <span>Supplementary (TBD)</span>
+                <span>Supplementary</span>
             </a>
             <a href="https://www.youtube.com/" class="button is-rounded is-link is-light mr-2">
                 <span class="icon"><i class="fab fa-youtube"></i></span>
@@ -113,7 +117,19 @@
             </h1>
             <div class="content has-text-justified-desktop">
                 <p>
-                    3D Morphable Models (3DMMs) demonstrate great potential for reconstructing faithful and animatable 3D facial surfaces from a single image. The facial surface is influenced by the coarse shape, as well as the static detail (e.g., person-specific appearance) and dynamic detail (e.g., expression-driven wrinkles). Previous work struggles to decouple the static and dynamic details through image-level supervision, leading to reconstructions that are not realistic. In this paper, we aim at high-fidelity 3D face reconstruction and propose HiFace to explicitly model the static and dynamic details. Specifically, the static detail is modeled as the linear combination of a displacement basis, while the dynamic detail is modeled as the linear interpolation of two displacement maps with polarized expressions. We exploit several loss functions to jointly learn the coarse shape and fine details with both synthetic and real-world datasets, which enable HiFace to reconstruct high-fidelity 3D shapes with animatable details. Extensive quantitative and qualitative experiments demonstrate that HiFace presents state-of-the-art reconstruction quality and faithfully recovers both the static and dynamic details.
+                    3D Morphable Models (3DMMs) demonstrate great potential for reconstructing faithful and animatable
+                    3D facial surfaces from a single image. The facial surface is influenced by the coarse shape, as
+                    well as the static detail (e.g., person-specific appearance) and dynamic detail (e.g.,
+                    expression-driven wrinkles). Previous work struggles to decouple the static and dynamic details
+                    through image-level supervision, leading to reconstructions that are not realistic. In this paper,
+                    we aim at high-fidelity 3D face reconstruction and propose HiFace to explicitly model the static and
+                    dynamic details. Specifically, the static detail is modeled as the linear combination of a
+                    displacement basis, while the dynamic detail is modeled as the linear interpolation of two
+                    displacement maps with polarized expressions. We exploit several loss functions to jointly learn the
+                    coarse shape and fine details with both synthetic and real-world datasets, which enable HiFace to
+                    reconstruct high-fidelity 3D shapes with animatable details. Extensive quantitative and qualitative
+                    experiments demonstrate that HiFace presents state-of-the-art reconstruction quality and faithfully
+                    recovers both the static and dynamic details.
                 </p>
             </div>
         </div>
@@ -126,7 +142,13 @@
             <div class="content has-text-justified-desktop">
                 <img class="mb-5" src="img/pipeline.png">
                 <p>
-                    <strong>Illustration of HiFace.</strong> (a). The learning architecture of HiFace. Given a monocular image, we regress its shape and detail coefficients to synthesize a realistic 3D face, and leverage a differentiable renderer to train the whole model end-to-end from synthetic and real-world images. (b). The pipeline of Static and Dynamic Decoupling for DeTail Reconstruction (SD-DeTail). We explicitly decouple the static and dynamic factors to synthesize realistic and animatable details. Given the shape and static coefficients, we regress the static and dynamic details through displacement bases and interpolate them into the final details through vertex tension.
+                    <strong>Illustration of HiFace.</strong> (a). The learning architecture of HiFace. Given a monocular
+                    image, we regress its shape and detail coefficients to synthesize a realistic 3D face, and leverage
+                    a differentiable renderer to train the whole model end-to-end from synthetic and real-world images.
+                    (b). The pipeline of Static and Dynamic Decoupling for DeTail Reconstruction (SD-DeTail). We
+                    explicitly decouple the static and dynamic factors to synthesize realistic and animatable details.
+                    Given the shape and static coefficients, we regress the static and dynamic details through
+                    displacement bases and interpolate them into the final details through vertex tension.
                 </p>
             </div>
         </div>
@@ -147,16 +169,16 @@
                     <h1 class="title is-4">
                         Detail Reconstruction
                     </h1>
-                    <!-- <video class="mb-3 is-16by9" width="100%" autoplay muted loop playsinline>
-                        <source src="video/dense_landmarks.mp4" type="video/mp4">
-                    </video> -->
                     <img class="mb-5" src="img/detail_example.png">
                 </div>
             </div>
             <p>
-                For coarse shape reconstruction, our HiFace faithfully recovers the coarse shape of the given identity and outperforms the previous learning-based methods, and is on par with <a href="https://microsoft.github.io/DenseLandmarks/">Dense</a>, the state-of-the-art
+                For coarse shape reconstruction, our HiFace faithfully recovers the coarse shape of the given identity
+                and outperforms the previous learning-based methods, and is on par with <a
+                    href="https://microsoft.github.io/DenseLandmarks/">Dense</a>, the state-of-the-art
                 optimization-based method.
-                For detail shape reconstruction, HiFace achieves the most realistic reconstruction quality, and faithfully recovers facial details of a given image,
+                For detail shape reconstruction, HiFace achieves the most realistic reconstruction quality, and
+                faithfully recovers facial details of a given image,
                 which significantly outperforms previous methods by a large margin.
             </p>
         </div>
@@ -170,7 +192,9 @@
                 <div class="column"><img src="img/plug_example.png" style="width: 100%;"></div>
             </div>
             <p class="has-text-justified-desktop">
-                SD-DeTail can be easily plugged into previous optimization-based methods. Given the identity and expression coefficients (&beta;, &xi;) from the optimization-based method, SD-DeTail can generate realistic details based on the coarse shape and further improve the visual quality. 
+                SD-DeTail can be easily plugged into previous optimization-based methods. Given the identity and
+                expression coefficients (&beta;, &xi;) from the optimization-based method, SD-DeTail can generate
+                realistic details based on the coarse shape and further improve the visual quality.
             </p>
         </div>
     </section>
@@ -182,7 +206,11 @@
             <div class="content has-text-justified-desktop">
                 <img class="mb-3" src="img/animation_example.png" />
                 <p>
-                    Given a source image (yellow box), we use the driving images (green box) to drive its person-specific details and expressions. For each source image, we manipulate the static (1st-row), dynamic (2nd-row), or both (3rd-row) factors. The results (red box) show that HiFace is flexible to animate details from static, dynamic, or both factors, and presents vivid animation quality with realistic shapes.
+                    Given a source image (yellow box), we use the driving images (green box) to drive its
+                    person-specific details and expressions. For each source image, we manipulate the static (1st-row),
+                    dynamic (2nd-row), or both (3rd-row) factors. The results (red box) show that HiFace is flexible to
+                    animate details from static, dynamic, or both factors, and presents vivid animation quality with
+                    realistic shapes.
                 </p>
             </div>
         </div>
@@ -192,13 +220,24 @@
             <h1 class="title is-4">
                 BibTeX
             </h1>
-            <pre>TBD</pre>
+            <pre>
+@misc{chai2023hiface,
+    title={HiFace: High-Fidelity 3D Face Reconstruction by Learning Static and Dynamic Details},
+    author={Zenghao Chai and Tianke Zhang and Tianyu He and Xu Tan and Tadas Baltrusaitis and HsiangTao Wu and Runnan Li and
+    Sheng Zhao and Chun Yuan and Jiang Bian},
+    year={2023},
+    eprint={2303.11225},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}</pre>
         </div>
     </section>
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-                Work conducted at <a href=https://www.microsoft.com/en-us>Microsoft</a>.<br/>
+                Work conducted at <a href=https://www.microsoft.com/en-us>Microsoft</a>.<br />
+                The website template was adapted from <a
+                    href="https://microsoft.github.io/FaceSynthetics/">here</a>.<br />
                 <img src="img/Microsoft-logo-only.svg" class="mt-5" alt="Microsoft" style="height: 2rem;">
             </p>
         </div>
