@@ -153,17 +153,18 @@
             </div>
         </div>
     </section>
-    <section class="section pt-0">
+
+    <!-- <section class="section pt-0">
         <div class="container is-max-desktop">
             <div class="columns">
                 <div class="column">
                     <h1 class="title is-4">
                         Coarse Reconstruction
-                    </h1>
-                    <!-- <video class="mb-3 is-16by9" width="100%" autoplay muted loop playsinline>
+                    </h1> -->
+    <!-- <video class="mb-3 is-16by9" width="100%" autoplay muted loop playsinline>
                         <source src="video/face_parsing.mp4" type="video/mp4">
                     </video> -->
-                    <img class="mb-5" src="img/coarse_example.png">
+    <!-- <img class="mb-5" src="img/coarse_example.png">
                 </div>
                 <div class="column">
                     <h1 class="title is-4">
@@ -181,16 +182,79 @@
                 faithfully recovers facial details of a given image,
                 which significantly outperforms previous methods by a large margin.
             </p>
-        </div>
-    </section>
+        </div> -->
+    <!-- </section> -->
+
     <section class="section pt-0">
         <div class="container is-max-desktop">
             <h1 class="title is-4">
-                Flexiblity of SD-DeTail
+                Coarse Reconstruction
             </h1>
             <div class="columns is-mobile is-variable is-0-mobile is-0-tablet is-1-desktop is-1-widescreen is-1-fullhd">
-                <div class="column"><img src="img/plug_example.png" style="width: 100%;"></div>
+                <div class="column"><img src="img/coarse.gif" style="width: 100%;"></div>
             </div>
+            <p class="has-text-justified-desktop">
+                For coarse shape reconstruction, our HiFace faithfully recovers the coarse shape of the given identity
+                and outperforms the previous learning-based methods, and is on par with <a
+                    href="https://microsoft.github.io/DenseLandmarks/">Dense</a>, the state-of-the-art
+                optimization-based method.
+            </p>
+        </div>
+    </section>
+
+    <section class="section pt-0">
+        <div class="container is-max-desktop">
+            <h1 class="title is-4">
+                Detail Reconstruction
+            </h1>
+            <div class="columns is-mobile is-variable is-0-mobile is-0-tablet is-1-desktop is-1-widescreen is-1-fullhd">
+                <div class="column"><img src="img/detail.gif" style="width: 100%;"></div>
+            </div>
+            <p class="has-text-justified-desktop">
+                For detail shape reconstruction, HiFace achieves the most realistic reconstruction quality, and
+                faithfully recovers facial details of a given image, which significantly outperforms previous methods by
+                a large margin.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="section pt-0">
+        <div class="container is-max-desktop">
+            <h1 class="title is-4">
+                Flexibility of SD-DeTail
+            </h1>
+            <div class="columns is-mobile is-variable is-0-mobile is-0-tablet is-1-desktop is-1-widescreen is-1-fullhd">
+                <div class="column"><img src="img/plug_example.gif" style="width: 100%;">
+                </div>
+            </div>
+            <video class="mb-3 is-16by9" width="32.8%" autoplay muted loop playsinline>
+                <source src="video/demo1_face.mp4" type="video/mp4">
+            </video>
+            <video class="mb-3 is-16by9" width="32.8%" autoplay muted loop playsinline>
+                <source src="video/demo1_coarse.mp4" type="video/mp4">
+            </video>
+            <video class="mb-3 is-16by9" width="32.8%" autoplay muted loop playsinline>
+                <source src="video/demo1_detail.mp4" type="video/mp4">
+            </video>
+            <video class="mb-3 is-16by9" width="32.8%" autoplay muted loop playsinline>
+                <source src="video/demo2_face.mp4" type="video/mp4">
+            </video>
+            <video class="mb-3 is-16by9" width="32.8%" autoplay muted loop playsinline>
+                <source src="video/demo2_coarse.mp4" type="video/mp4">
+            </video>
+            <video class="mb-3 is-16by9" width="32.8%" autoplay muted loop playsinline>
+                <source src="video/demo2_detail.mp4" type="video/mp4">
+            </video>
+            <video class="mb-3 is-16by9" width="32.8%" autoplay muted loop playsinline>
+                <source src="video/demo3_face.mp4" type="video/mp4">
+            </video>
+            <video class="mb-3 is-16by9" width="32.8%" autoplay muted loop playsinline>
+                <source src="video/demo3_coarse.mp4" type="video/mp4">
+            </video>
+            <video class="mb-3 is-16by9" width="32.8%" autoplay muted loop playsinline>
+                <source src="video/demo3_detail.mp4" type="video/mp4">
+            </video>
             <p class="has-text-justified-desktop">
                 SD-DeTail can be easily plugged into previous optimization-based methods. Given the identity and
                 expression coefficients (&beta;, &xi;) from the optimization-based method, SD-DeTail can generate
